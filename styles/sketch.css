@@ -1,5 +1,37 @@
 
 div {
   color: yellow;
-  width: 100px;
 }
+
+.row {
+  height: 10px;
+  width: 320px;
+  overflow: hidden;
+  margin: 0 auto;
+  /* Debugging */
+  background-color: cyan;
+  border-top-width: 1px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-color: red;
+  border-style: dotted;
+  /**/
+}
+
+.row > .cell {
+  height: 100%;
+  width: 10px;
+  display: inline-block;
+  float: left;
+  /* Debugging */
+  background-color: yellow;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 1px;
+  border-bottom-width: 0px;
+  border-color: orange;
+  border-style: solid;
+  /**/
+}
+
