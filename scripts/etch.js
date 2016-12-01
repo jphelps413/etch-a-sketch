@@ -1,6 +1,10 @@
-gRows = 32
-gCols = 32
+gRows = 16
+gCols = 16
 
+/*
+ * Example of CSS insertion from JS. This was simply a capture and is not
+ * necessarily relevant to this project.
+ */
 function testCSS() {
   console.log("testCSS")
   $('div').css({
@@ -10,6 +14,9 @@ function testCSS() {
   })
 }
 
+/*
+ * Build up the gridbag div for the etch a sketch.
+ */
 function buildGridbag(rows,cols) {
   //console.log("buildGrid: Grid will be "+ rows +" by "+ cols)
   $theGrid = $('#gridbag')
@@ -27,4 +34,7 @@ function buildGridbag(rows,cols) {
 
 $(document).ready( function() {
   buildGridbag(gRows,gCols)
+  $('.cell').hover( function() {
+    $(this).css({'background-color': 'green'})
+  });
 })
