@@ -1,5 +1,5 @@
-gRows = 16
-gCols = 16
+gRows = 32
+gCols = 32
 
 function testCSS() {
   console.log("testCSS")
@@ -10,19 +10,21 @@ function testCSS() {
   })
 }
 
-$(document).ready( function() {
-  console.log("buildGrid: Grid will be "+ gRows +" by "+ gCols)
+function buildGridbag(rows,cols) {
+  //console.log("buildGrid: Grid will be "+ rows +" by "+ cols)
+  $theGrid = $('#gridbag')
+  $theGrid.empty()
 
-  for( r = 0; r < gRows; r++ ) {
+  for( r = 0; r < rows; r++ ) {
     rowId = "r"+r
-    rowDiv = '<div class="row" id="'+rowId+'"></div>'
-    console.log( "Append="+rowDiv )
-    $('#gridbag').append(rowDiv)
-    for( c = 0; c < gCols; c++ ) {
-      cellId = "c"+r+"."+c
-      cellDiv = '<div class="cell" id="'+cellId+'"></div>'
-      console.log("Append "+rowDiv+"="+cellDiv)
-      $('#'+rowId).append(cellDiv)
+    $theGrid.append('<div class="row" id="'+rowId+'"></div>')
+    for( c = 0; c < cols; c++ ) {
+      //console.log("Append "+rowId+"="+cellDiv)
+      $('#'+rowId).append( '<div class="cell" id="c'+r+'.'+c+'"></div>' )
     }
   }
+}
+
+$(document).ready( function() {
+  buildGridbag(gRows,gCols)
 })
