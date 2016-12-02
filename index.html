@@ -3,14 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Odin Etch A Sketch</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="scripts/etch.js"></script>
-    <link rel="stylesheet" href="styles/sketch.css" type="text/css">
+    <link rel="stylesheet" href="css/sketch.css" type="text/css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/etch.js"></script>
   </head>
 
   <body>
-    <div>Odin Etch A Sketch.</div>
-    <div id="gridbag"></div>
+    <div id="frame">
+      <h1>Odin Etch A Sketch</h1>
+      <div id="etcher"></div>
+      <div id="btnbar">
+        <button type="button" id="erase">erase</button>
+        <button type="button" id="resize">resize</button>
+      </div>
+    </div>
   </body>
 
 </html>

@@ -1,0 +1,37 @@
+
+h1 {
+  color: orange;
+  font-family: fantasy;
+  font-size: xx-large;
+  padding-top: 15px;
+  text-align: center;
+}
+
+#frame {
+  width: 745px;
+  height: 800px;
+  background-color: brown;
+  border-radius: 5px;
+}
+
+#etcher {
+  width:  640px;
+  height: 640px;
+  margin: 0 auto;
+}
+
+.cell {
+  display: inline-block;
+  float: left;
+  background-color: #E8E8E8;
+}
+
+#btnbar {
+  text-align: center;
+}
+
+button {
+  background-color: orange;
+  border-radius: 5px;
+  margin-top: 15px;
+}
